@@ -20,19 +20,28 @@ const base = '/Jo-Ah-Kim-s-History-Trip';
       </div>
       
       <div class="card pricing-range-card">
-        <h3>Budget Range Tiers</h3>
+        <h3 class="card-title-sm">Budget Style Tiers</h3>
         <ul class="range-list">
           <li>
-            <span class="range-label">Sensible Luxury</span>
-            <span class="range-value">$15,000 – $16,500</span>
+            <div class="range-info">
+              <span class="range-label">Sensible Luxury</span>
+              <span class="range-desc">Selected Five-Star & Premium Local</span>
+            </div>
+            <span class="range-value">$15,500+</span>
           </li>
           <li>
-            <span class="range-label">Realistic Premium</span>
-            <span class="range-value">$17,500 – $18,500</span>
+            <div class="range-info">
+              <span class="range-label">Realistic Premium</span>
+              <span class="range-desc">Metropole / Nam Hai / Private Guide</span>
+            </div>
+            <span class="range-value">$18,000+</span>
           </li>
           <li>
-            <span class="range-label">Indulgent Version</span>
-            <span class="range-value">$20,000+</span>
+            <div class="range-info">
+              <span class="range-label">Indulgent Heritage</span>
+              <span class="range-desc">Top Suites / Fine Wine / Helicopter</span>
+            </div>
+            <span class="range-value">$22,000+</span>
           </li>
         </ul>
       </div>
@@ -248,12 +257,28 @@ const base = '/Jo-Ah-Kim-s-History-Trip';
   .range-list li {
     display: flex;
     justify-content: space-between;
-    border-bottom: 1px solid var(--color-border);
-    padding-bottom: 0.5rem;
+    align-items: center;
+    border-bottom: 1px solid var(--color-bg-alt);
+    padding: 0.75rem 0;
   }
 
-  .range-label { font-weight: 500; font-size: 0.9rem; }
-  .range-value { font-family: var(--font-serif); font-weight: 700; color: var(--color-accent); }
+  .range-info {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .range-label { font-weight: 700; font-size: 0.9rem; color: var(--color-primary); }
+  .range-desc { font-size: 0.75rem; color: var(--color-text-muted); }
+  .range-value { font-family: var(--font-serif); font-weight: 700; color: var(--color-accent); font-size: 1.1rem; }
+
+  .card-title-sm {
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--color-text-muted);
+    margin-bottom: 1rem;
+    font-weight: 700;
+  }
 
   .pricing-timeline {
     display: flex;

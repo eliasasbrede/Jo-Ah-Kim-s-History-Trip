@@ -20,10 +20,10 @@ const issueUrl = `https://github.com/${repo}/issues/new?template=${template}`;
 ---
 
 <section class="suggestions-section no-print" id="suggestions">
-  <div class="card bg-accent-soft p-lg">
+  <div class="card suggestions-card p-lg">
     <div class="suggestions-header">
       <h2 class="section-title">{title}</h2>
-      <p class="muted">Your feedback helps refine this journey. Use the buttons below for structured suggestions or leave a threaded comment for discussion.</p>
+      <p class="muted">Your feedback helps refine this journey. Use the buttons below for structured suggestions or contribute to the threaded discussion.</p>
     </div>
 
     <div class="suggestion-actions">
@@ -65,9 +65,10 @@ const issueUrl = `https://github.com/${repo}/issues/new?template=${template}`;
     padding-top: var(--spacing-lg);
   }
 
-  .bg-accent-soft {
-    background-color: var(--color-accent-soft);
-    border: none;
+  .suggestions-card {
+    background-color: #fafaf8;
+    border: 1px solid var(--color-accent-soft);
+    box-shadow: none;
   }
 
   .suggestions-header {

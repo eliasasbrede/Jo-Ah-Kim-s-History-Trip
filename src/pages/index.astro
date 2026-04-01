@@ -10,10 +10,10 @@ const base = '/Jo-Ah-Kim-s-History-Trip';
       <div class="hero-overlay"></div>
       <div class="container hero-content">
         <h1 class="hero-title animate-fade-up">Joachim’s 70th Birthday: <br/><span class="accent-text">Historical Vietnam Week</span></h1>
-        <p class="hero-subtitle animate-fade-up-delay">A seven-night journey from Hanoi to Huế to Hội An, closing in Ho Chi Minh City. Expected: May 2027 (Dates TBD).</p>
+        <p class="hero-subtitle animate-fade-up-delay">A seven-night historical journey from the dynastic core of Hanoi to the imperial grandeur of Huế and the vibrant energy of Saigon. Expected May 2027.</p>
         <div class="hero-cta animate-fade-up-delay-2">
-          <a href={`${base}/itinerary`} class="btn">Explore the Itinerary</a>
-          <a href="#overview" class="btn btn-outline" style="color: white; border-color: white;">The Journey Arc</a>
+          <a href={`${base}/itinerary`} class="btn btn-hero">Explore the Itinerary</a>
+          <a href="#overview" class="btn btn-outline-hero">The Journey Arc</a>
         </div>
       </div>
     </section>
@@ -87,10 +87,10 @@ const base = '/Jo-Ah-Kim-s-History-Trip';
 
 <style>
   .hero {
-    height: 85vh;
-    background-image: url('https://images.unsplash.com/photo-1555944858-752c8a20ca30?auto=format&fit=crop&q=80&w=1500');
+    height: 90vh;
+    background-image: url('https://images.unsplash.com/photo-1526761122248-c31c93f8b2b9?auto=format&fit=crop&q=80&w=2000');
     background-size: cover;
-    background-position: center;
+    background-position: 40% center;
     position: relative;
     display: flex;
     align-items: center;
@@ -133,6 +133,28 @@ const base = '/Jo-Ah-Kim-s-History-Trip';
   .hero-cta {
     display: flex;
     gap: var(--spacing-sm);
+  }
+
+  .btn-hero {
+    background-color: var(--color-accent);
+    border-color: var(--color-accent);
+  }
+
+  .btn-hero:hover {
+    background-color: white;
+    color: var(--color-primary);
+    border-color: white;
+  }
+
+  .btn-outline-hero {
+    background-color: transparent;
+    color: white;
+    border: 1px solid white;
+  }
+
+  .btn-outline-hero:hover {
+    background-color: white;
+    color: var(--color-primary);
   }
 
   .overview-grid {

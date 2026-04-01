@@ -18,7 +18,7 @@ const base = '/Jo-Ah-Kim-s-History-Trip';
         <div class="dining-item card">
           <div class="dining-header">
             <h2 class="dining-name">{restaurant.name}</h2>
-            <div class="michelin-badge badge badge-gold">{restaurant.michelin}</div>
+            <div class="michelin-badge badge badge-gold" aria-label={`Michelin status: ${restaurant.michelin}`}>{restaurant.michelin}</div>
           </div>
           
           <div class="dining-meta">
@@ -26,10 +26,10 @@ const base = '/Jo-Ah-Kim-s-History-Trip';
             <span class="dining-style"><strong>Style:</strong> {restaurant.style}</span>
           </div>
           
-          <p class="dining-reason">{restaurant.reason}</p>
+          <p class="dining-reason"><em>{restaurant.reason}</em></p>
           
           <div class="dining-footer">
-            <a href={restaurant.url} target="_blank" rel="noopener noreferrer" class="btn btn-outline small">View Restaurant Website</a>
+            <a href={restaurant.url} target="_blank" rel="noopener noreferrer" class="btn btn-outline small" aria-label={`Visit official website for ${restaurant.name}`}>View Website</a>
           </div>
         </div>
       ))}
@@ -38,9 +38,9 @@ const base = '/Jo-Ah-Kim-s-History-Trip';
     <SectionSuggestion section="dining" title="Dining Suggestions" />
 
     <section class="hue-dining section">
-      <div class="card bg-accent-soft text-center p-lg">
+      <div class="card suggestions-card text-center p-lg">
         <h3>Imperial Dining in Huế</h3>
-        <p>For the stay in Huế, including the milestone 70th Birthday on May 26, we focus on integrated <strong>fine dining</strong> at our five-star hosting properties. The menus offer a deep exploration of provincial specialties, traditionally prepared for the royal court of the Nguyễn Dynasty.</p>
+        <p>For the stay in Huế, including the milestone 70th Birthday celebration, we focus on integrated <strong>fine dining</strong> at our five-star hosting properties. The menus offer a deep exploration of provincial specialties, traditionally prepared for the royal court of the Nguyễn Dynasty.</p>
       </div>
     </section>
   </main>
@@ -68,8 +68,14 @@ const base = '/Jo-Ah-Kim-s-History-Trip';
   .dining-item {
     display: flex;
     flex-direction: column;
-    gap: var(--spacing-sm);
+    gap: 1rem;
     justify-content: space-between;
+    transition: var(--transition);
+  }
+
+  .dining-item:hover {
+    box-shadow: var(--shadow-hover);
+    transform: translateY(-2px);
   }
 
   .dining-header {
