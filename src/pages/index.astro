@@ -1,5 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import JourneyMap from '../components/JourneyMap.astro';
 const base = '/Jo-Ah-Kim-s-History-Trip';
 ---
 
@@ -34,6 +35,10 @@ const base = '/Jo-Ah-Kim-s-History-Trip';
                 <span class="detail-label">Milestone</span>
                 <span class="detail-value">70th Birthday Celebration</span>
               </div>
+            </div>
+
+            <div class="map-preview mt-md">
+              <JourneyMap height="250px" zoom={4} interactive={false} />
             </div>
           </div>
           

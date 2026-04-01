@@ -1,7 +1,8 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import HotelCard from '../components/HotelCard.astro';
-import hotelData from '../data/hotels.json';
+import hotelsData from '../data/hotels.json';
+import SectionSuggestion from '../components/SectionSuggestion.astro';
 
 const base = '/Jo-Ah-Kim-s-History-Trip';
 ---
@@ -14,10 +15,12 @@ const base = '/Jo-Ah-Kim-s-History-Trip';
     </header>
 
     <div class="hotels-grid">
-      {hotelData.map((hotel) => (
+      {hotelsData.map((hotel) => (
         <HotelCard {...hotel} />
       ))}
     </div>
+
+    <SectionSuggestion section="hotel" title="Hotel Suggestions" />
 
     <section class="hotel-philosophy section">
       <div class="card bg-accent-soft text-center p-lg">

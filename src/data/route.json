@@ -1,0 +1,38 @@
+[
+  {
+    "id": "hanoi",
+    "name": "Hanoi",
+    "coordinates": [21.0285, 105.8542],
+    "description": "The 1000-year-old Capital"
+  },
+  {
+    "id": "ninhbinh",
+    "name": "Ninh Binh",
+    "coordinates": [20.2506, 105.8953],
+    "description": "Trang An Scenic Landscape"
+  },
+  {
+    "id": "hue",
+    "name": "Hue",
+    "coordinates": [16.4637, 107.5909],
+    "description": "The Imperial Citadel"
+  },
+  {
+    "id": "danang",
+    "name": "Da Nang",
+    "coordinates": [16.0544, 108.2022],
+    "description": "Cham Museum & Mountains"
+  },
+  {
+    "id": "hoian",
+    "name": "Hoi An",
+    "coordinates": [15.8801, 108.3271],
+    "description": "Ancient Trading Port"
+  },
+  {
+    "id": "hcmc",
+    "name": "Ho Chi Minh City",
+    "coordinates": [10.7769, 106.7009],
+    "description": "Modern Metropolis"
+  }
+]

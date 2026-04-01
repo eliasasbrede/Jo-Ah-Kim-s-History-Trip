@@ -1,0 +1,105 @@
+---
+interface Props {
+  section: 'itinerary' | 'hotel' | 'dining' | 'history' | 'pricing';
+  title?: string;
+}
+
+const { section, title = "Suggestions & Comments" } = Astro.props;
+
+const repo = "eliasasbrede/Jo-Ah-Kim-s-History-Trip";
+const issueTemplates = {
+  itinerary: "itinerary-suggestion.yml",
+  hotel: "hotel-suggestion.yml",
+  dining: "dining-suggestion.yml",
+  history: "history-theme-suggestion.yml",
+  pricing: "pricing-suggestion.yml"
+};
+
+const template = issueTemplates[section];
+const issueUrl = `https://github.com/${repo}/issues/new?template=${template}`;
+---
+
+<section class="suggestions-section no-print" id="suggestions">
+  <div class="card bg-accent-soft p-lg">
+    <div class="suggestions-header">
+      <h2 class="section-title">{title}</h2>
+      <p class="muted">Your feedback helps refine this journey. Use the buttons below for structured suggestions or leave a threaded comment for discussion.</p>
+    </div>
+
+    <div class="suggestion-actions">
+      <a href={issueUrl} target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+        Suggest changes to this section
+      </a>
+      <p class="helper-text mt-sm">This opens a structured form directly in GitHub for our review.</p>
+    </div>
+
+    <div class="giscus-container mt-lg">
+      <!-- giscus will be loaded here -->
+      <script src="https://giscus.app/client.js"
+              data-repo={repo}
+              data-repo-id="R_kgDOOAeOsg" 
+              data-category="Trip Suggestions"
+              data-category-id="DIC_kwDOOAeOss4Cn-5v"
+              data-mapping="pathname"
+              data-strict="0"
+              data-reactions-enabled="1"
+              data-emit-metadata="0"
+              data-input-position="bottom"
+              data-theme="light"
+              data-lang="en"
+              crossorigin="anonymous"
+              async>
+      </script>
+      <noscript>Please enable JavaScript to view comments.</noscript>
+    </div>
+
+    <div class="setup-notice mt-md italic">
+      <p>Note: Submitting suggestions or comments requires a GitHub account for persistent and verifiable feedback storage.</p>
+    </div>
+  </div>
+</section>
+
+<style>
+  .suggestions-section {
+    margin-top: var(--spacing-xl);
+    border-top: 1px solid var(--color-border);
+    padding-top: var(--spacing-lg);
+  }
+
+  .bg-accent-soft {
+    background-color: var(--color-accent-soft);
+    border: none;
+  }
+
+  .suggestions-header {
+    margin-bottom: var(--spacing-md);
+  }
+
+  .section-title {
+    font-size: 1.75rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .suggestion-actions {
+    text-align: center;
+    padding: var(--spacing-md) 0;
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+  }
+
+  .helper-text {
+    font-size: 0.8rem;
+    color: var(--color-text-muted);
+  }
+
+  .giscus-container {
+    min-height: 200px;
+  }
+
+  .mt-lg { margin-top: 2.5rem; }
+  .mt-md { margin-top: 1.5rem; }
+  .mt-sm { margin-top: 0.5rem; }
+  .p-lg { padding: 2.5rem; }
+  .italic { font-style: italic; }
+  .text-center { text-align: center; }
+  .muted { color: var(--color-text-muted); font-size: 0.95rem; }
+</style>

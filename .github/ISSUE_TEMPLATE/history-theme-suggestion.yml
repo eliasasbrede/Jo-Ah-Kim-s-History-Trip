@@ -1,0 +1,31 @@
+name: "History Theme Suggestion"
+description: "Suggest changes to the historical narratives or museum visits."
+title: "[History] Expansion or Refinement of "
+labels: ["history", "suggestion"]
+body:
+  - type: textarea
+    id: current-theme
+    attributes:
+      label: "Topic to Expand, Reduce, or Remove"
+      placeholder: "e.g., Colonial Memory, Museum of Cham Sculpture"
+    validations:
+      required: true
+  - type: textarea
+    id: suggested-expansion
+    attributes:
+      label: "Suggested Source or Perspective"
+      placeholder: "e.g., Focus more on the architecture, add a book/article reference"
+    validations:
+      required: true
+  - type: textarea
+    id: reason
+    attributes:
+      label: "Reason for Suggestion"
+      placeholder: "Why shift the focus? (Better clarity, deeper local insight, etc.)"
+    validations:
+      required: true
+  - type: textarea
+    id: additional-sources
+    attributes:
+      label: "Recommended Source (Optional)"
+      placeholder: "Article link, book title, or expert contact"

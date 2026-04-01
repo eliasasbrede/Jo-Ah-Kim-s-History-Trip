@@ -1,0 +1,66 @@
+name: "Pricing & Style Suggestion"
+description: "Suggest budget adjustments or travel style preferences."
+title: "[Pricing] Recommendation for "
+labels: ["pricing", "suggestion"]
+body:
+  - type: input
+    id: budget-estimate
+    attributes:
+      label: "Total Budget Willing to Spend"
+      placeholder: "e.g., $15,000"
+    validations:
+      required: true
+  - type: dropdown
+    id: budget-currency
+    attributes:
+      label: "Preferred Budget Currency"
+      options:
+        - "USD"
+        - "EUR"
+        - "CHF"
+        - "VND"
+  - type: input
+    id: traveler-count
+    attributes:
+      label: "Number of Travelers"
+      placeholder: "e.g., 5"
+  - type: dropdown
+    id: hotel-level
+    attributes:
+      label: "Preferred Hotel Standard"
+      options:
+        - "Five Star (The Metropole level)"
+        - "Boutique Luxury"
+        - "Comfort (Silk Path level)"
+        - "Local Character"
+  - type: dropdown
+    id: transport-preference
+    attributes:
+      label: "Preferred Transport Style"
+      options:
+        - "Self-drive"
+        - "Rented Large Van"
+        - "Private Driver (Dedicated)"
+        - "Domestic Flights (Primary)"
+        - "Mixed Mode"
+  - type: checkboxes
+    id: tradeoffs
+    attributes:
+      label: "Preferred Tradeoff"
+      options:
+        - label: "Lower Cost"
+        - label: "More Comfort"
+        - label: "Deeper History focus"
+        - label: "Less moving/slow travel"
+  - type: dropdown
+    id: route-change
+    attributes:
+      label: "Willingness to Change Route?"
+      options:
+        - "No (current route only)"
+        - "Limited (small variations)"
+        - "Yes (major changes allowed)"
+  - type: textarea
+    id: notes
+    attributes:
+      label: "Additional Notes or Reasoning"

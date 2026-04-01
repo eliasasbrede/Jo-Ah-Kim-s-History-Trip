@@ -1,0 +1,44 @@
+name: "Hotel Suggestion"
+description: "Suggest a better or alternative hotel option."
+title: "[Hotel] Alternative for "
+labels: ["hotel", "suggestion"]
+body:
+  - type: dropdown
+    id: city
+    attributes:
+      label: "City / Location"
+      options:
+        - "Hanoi"
+        - "Ninh Binh"
+        - "Hue"
+        - "Da Nang / Hoi An"
+        - "Ho Chi Minh City"
+    validations:
+      required: true
+  - type: input
+    id: current-hotel
+    attributes:
+      label: "Current Hotel"
+      placeholder: "e.g., Silk Path Grand Hue"
+  - type: input
+    id: suggested-hotel
+    attributes:
+      label: "Suggested Replacement"
+      placeholder: "e.g., La Folie"
+    validations:
+      required: true
+  - type: textarea
+    id: reason
+    attributes:
+      label: "Reason for Suggestion"
+      placeholder: "Better location, budget, history, or amenity?"
+    validations:
+      required: true
+  - type: dropdown
+    id: budget-impact
+    attributes:
+      label: "Budget Impact"
+      options:
+        - "Cheaper"
+        - "Neutral"
+        - "More expensive"

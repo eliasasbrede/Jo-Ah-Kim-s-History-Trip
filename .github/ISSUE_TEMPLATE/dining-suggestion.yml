@@ -1,0 +1,40 @@
+name: "Dining Suggestion"
+description: "Suggest a better or alternative dining option."
+title: "[Dining] Alternative for "
+labels: ["dining", "suggestion"]
+body:
+  - type: dropdown
+    id: city
+    attributes:
+      label: "City / Location"
+      options:
+        - "Hanoi"
+        - "Hue"
+        - "Da Nang / Hoi An"
+        - "Ho Chi Minh City"
+    validations:
+      required: true
+  - type: input
+    id: current-dining
+    attributes:
+      label: "Current Dining Plan"
+      placeholder: "e.g., Dinner at Gia"
+  - type: input
+    id: suggested-dining
+    attributes:
+      label: "Suggested Restaurant or Food Style"
+      placeholder: "e.g., Hidden Home Food Hanoi"
+    validations:
+      required: true
+  - type: textarea
+    id: reason
+    attributes:
+      label: "Reason for Suggestion"
+      placeholder: "Better local taste, historical setting, or better for group size?"
+    validations:
+      required: true
+  - type: textarea
+    id: dietary-note
+    attributes:
+      label: "Dietary Note"
+      placeholder: "Vegetarian, allergies, or special requirements if relevant."

@@ -11,40 +11,37 @@ This site serves as a digital gift and comprehensive guide for Joachim’s miles
 - **Deployment:** GitHub Pages via GitHub Actions
 - **Data:** Structured JSON for itinerary, hotels, and dining
 
-## Project Structure
-- `/src/data/`: Contains `itinerary.json`, `hotels.json`, and `dining.json`. This is the core of the site content.
-- `/src/components/`: Reusable Astro components (Cards, Nav, Footer).
-- `/src/pages/`: Individual site pages.
-- `/public/files/`: Contains the downloadable `.ics` calendar file.
-- `/public/images/`: (Planned) Directory for optimized local images.
+## New Features: Journey Map & Suggestions
+The site now includes a visual **Journey Map** and a persistent **Suggestion System** to gather feedback from family and travelers.
 
-## Local Development
-1. **Install Dependencies:**
-   ```bash
-   npm install
-   ```
-2. **Start Development Server:**
-   ```bash
-   npm run dev
-   ```
-3. **Build Static Site:**
-   ```bash
-   npm run build
-   ```
+### 🗺️ Journey Map
+- **Data:** Coordinates for the travel stops (Hanoi, Hue, Hoi An, etc.) are stored in `src/data/route.json`.
+- **Implementation:** Built with **Leaflet.js** and OpenStreetMap. It automatically draws a connecting route and places markers for each stop.
 
-## Content Management
+### 💬 Suggestions & Persistent Comments
+The site uses a hybrid approach for a fully static setup:
+1. **giscus (Threaded Comments):** Integrated at the bottom of each page for discussion.
+2. **Structured Issues (Suggestions):** "Suggest changes" buttons open pre-filled GitHub Issue forms for Itinerary, Hotels, Dining, History, and Pricing.
+
+#### 🛠️ Setup Instructions for Repo Owner:
+To enable the suggestion system:
+1. **Enable GitHub Discussions:** Go to your repository settings and check the "Discussions" box.
+2. **Create a Category:** In the "Discussions" tab, create a new category named `Trip Suggestions` (select the "Announcements" or "General" type if needed).
+3. **Configure giscus:**
+   - The current `SectionSuggestion.astro` is set to `eliasasbrede/Jo-Ah-Kim-s-History-Trip`.
+   - If you rename the repo, update the `repo` constant in `src/components/SectionSuggestion.astro`.
+   - Ensure the giscus app is installed on your repository [here](https://github.com/apps/giscus).
+
+### Content Management
 - **Itinerary:** Edit `src/data/itinerary.json` to modify daily activities, descriptions, or historical notes.
-- **Hotels & Dining:** Update `src/data/hotels.json` and `src/data/dining.json` for recommendations and Michelin details.
-- **Calendar:** The `.ics` file is located at `public/files/historical-vietnam-week.ics`. Update this manually if dates or event details change.
+- **Route:** Update `src/data/route.json` to change map marker positions or city labels.
+- **Hotels & Dining:** Update `src/data/hotels.json` and `src/data/dining.json` for recommendations and official image URLs.
+- **Calendar:** The `.ics` file is located at `public/files/historical-vietnam-week.ics`. Update this manually if dates change.
 
-## Image Replacement
-Current images are high-quality placeholders from Unsplash to ensure a premium aesthetic for the gift preview. For the final version:
-1. Place your own high-resolution photos in `public/images/`.
-2. Update the image paths in `src/data/hotels.json` or within the individual `.astro` pages.
-3. The site is optimized to handle high-resolution assets with lazy loading.
-
-## Deployment
-The site is configured for **GitHub Pages**. Every push to the `main` branch triggers a GitHub Action (`.github/workflows/deploy.yml`) that builds and publishes the site automatically.
+## Project Structure
+- `/src/data/`: `itinerary.json`, `hotels.json`, `dining.json`, and `route.json`.
+- `/.github/ISSUE_TEMPLATE/`: Custom YAML forms for structured feedback.
+- `/src/components/`: Includes `JourneyMap.astro` and `SectionSuggestion.astro`.
 
 ## License
 MIT License. See `LICENSE` for details.

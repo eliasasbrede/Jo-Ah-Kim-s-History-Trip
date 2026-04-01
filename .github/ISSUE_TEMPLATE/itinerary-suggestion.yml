@@ -1,0 +1,46 @@
+name: "Itinerary Suggestion"
+description: "Suggest changes to a specific day or stop in the Vietnam journey."
+title: "[Itinerary] Suggestion for Day "
+labels: ["itinerary", "suggestion"]
+body:
+  - type: textarea
+    id: current-itinerary
+    attributes:
+      label: "Current Day/Stop to Change"
+      placeholder: "e.g., Day 4, Hue Citadel"
+    validations:
+      required: true
+  - type: textarea
+    id: suggestion
+    attributes:
+      label: "Suggested Replacement or Addition"
+      placeholder: "e.g., Add a visit to the Nam Giao Esplanade"
+    validations:
+      required: true
+  - type: textarea
+    id: reason
+    attributes:
+      label: "Reason for Suggestion"
+      placeholder: "Why is this better? (History, accessibility, interest, etc.)"
+    validations:
+      required: true
+  - type: dropdown
+    id: mobility
+    attributes:
+      label: "Mobility Considerations"
+      options:
+        - "Standard"
+        - "Limited walking (more breaks)"
+        - "Very light (major mobility constraints)"
+  - type: dropdown
+    id: pace
+    attributes:
+      label: "Preferred Pace"
+      options:
+        - "Relaxed (fewest stops)"
+        - "Balanced (current)"
+        - "High-intensity (see more)"
+  - type: textarea
+    id: notes
+    attributes:
+      label: "General Notes"

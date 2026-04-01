@@ -1,6 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import diningData from '../data/dining.json';
+import SectionSuggestion from '../components/SectionSuggestion.astro';
 
 const base = '/Jo-Ah-Kim-s-History-Trip';
 ---
@@ -33,6 +34,8 @@ const base = '/Jo-Ah-Kim-s-History-Trip';
         </div>
       ))}
     </div>
+
+    <SectionSuggestion section="dining" title="Dining Suggestions" />
 
     <section class="hue-dining section">
       <div class="card bg-accent-soft text-center p-lg">

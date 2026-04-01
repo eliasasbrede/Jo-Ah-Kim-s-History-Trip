@@ -2,6 +2,8 @@
 import Layout from '../layouts/Layout.astro';
 import ItineraryCard from '../components/ItineraryCard.astro';
 import itineraryData from '../data/itinerary.json';
+import JourneyMap from '../components/JourneyMap.astro';
+import SectionSuggestion from '../components/SectionSuggestion.astro';
 
 const base = '/Jo-Ah-Kim-s-History-Trip';
 ---
@@ -11,6 +13,8 @@ const base = '/Jo-Ah-Kim-s-History-Trip';
     <header class="page-header">
       <h1 class="page-title">The Itinerary</h1>
       <p class="page-subtitle">A seven-night historical journey through the heart of Vietnam.</p>
+      
+      <JourneyMap height="350px" zoom={5} />
       
       <div class="itinerary-actions no-print">
         <a href={`${base}/files/historical-vietnam-week.ics`} download class="btn btn-outline" title="Add to Calendar">
@@ -34,6 +38,8 @@ const base = '/Jo-Ah-Kim-s-History-Trip';
         <p>Following the final sights in Ho Chi Minh City on Day 8, the curated historical journey concludes. We hope this week has been a memorable tribute to 70 years of life and legacy.</p>
       </div>
     </section>
+
+    <SectionSuggestion section="itinerary" title="Itinerary Suggestions" />
   </main>
 </Layout>
 
