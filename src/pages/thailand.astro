@@ -1,0 +1,114 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const base = '/Jo-Ah-Kim-s-History-Trip';
+---
+
+<Layout title="Thailand Handoff" description="Details for the handoff in Bangkok, Thailand, including arrival card requirements and visa exemptions.">
+  <main class="container">
+    <header class="page-header">
+      <h1 class="page-title">Thailand Handoff</h1>
+      <p class="page-subtitle">Closing the Vietnam week and meeting the family in Bangkok.</p>
+    </header>
+
+    <div class="handoff-content card">
+      <div class="handoff-hero section">
+        <h2 class="section-title">The Transition</h2>
+        <p>On May 30, the historical journey through Vietnam concludes with a flight from <strong>Ho Chi Minh City (Tan Son Nhat)</strong> to <strong>Bangkok (Suvarnabhumi)</strong>. This marks the transition from the hosted history week to the family reunion with wife and child.</p>
+      </div>
+
+      <div class="practical-notes grid">
+        <div class="note-card border-p">
+          <h3>Thailand Digital Arrival Card</h3>
+          <p>As of 2026, the <strong>Thailand Digital Arrival Card (TDAC)</strong> is mandatory for all foreign nationals. Details must be submitted on the official Thai Immigration portal within <strong>72 hours (3 days)</strong> before arrival.</p>
+          <p class="accent-note"><em>Proceed with the official link below once within the 72-hour window.</em></p>
+          <a href="https://tdac.immigration.go.th/" target="_blank" rel="noopener noreferrer" class="btn btn-outline small">Official TDAC Portal</a>
+        </div>
+
+        <div class="note-card border-p">
+          <h3>Visa Exemption</h3>
+          <p>Swiss and Liechtenstein passport holders are currently eligible for the <strong>Visa Exemption Scheme</strong>, allowing for a stay of up to <strong>60 days</strong> for tourism purposes without a visa.</p>
+          <p class="muted-note"><em>Subject to current official conditions at the time of travel.</em></p>
+        </div>
+      </div>
+      
+      <div class="handoff-style section">
+        <h3>Arrival in Bangkok</h3>
+        <ul class="check-list">
+          <li><strong>Passport Validity:</strong> Ensure at least 6 months remaining.</li>
+          <li><strong>Onward Ticket:</strong> Proof of return or onward travel may be requested.</li>
+          <li><strong>Meeting Point:</strong> Coordination with family for airport pickup or hotel meeting.</li>
+        </ul>
+      </div>
+    </div>
+  </main>
+</Layout>
+
+<style>
+  .page-header {
+    padding: var(--spacing-lg) 0;
+    text-align: center;
+    margin-bottom: var(--spacing-lg);
+  }
+
+  .handoff-content {
+    background-color: white;
+    padding: var(--spacing-lg);
+  }
+
+  .section-title {
+    font-size: 2.25rem;
+    margin-bottom: var(--spacing-md);
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--spacing-lg);
+    margin-top: var(--spacing-lg);
+  }
+
+  .border-p {
+    border: 1px solid var(--color-border);
+    padding: var(--spacing-md);
+    border-radius: var(--border-radius);
+  }
+
+  .accent-note {
+    color: var(--color-accent);
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin: 1rem 0;
+    display: block;
+  }
+
+  .muted-note {
+    color: var(--color-text-muted);
+    font-size: 0.85rem;
+    margin-top: 1rem;
+    display: block;
+  }
+
+  .check-list {
+    list-style: none;
+    margin-top: 1rem;
+  }
+
+  .check-list li::before {
+    content: '✓';
+    color: var(--color-accent);
+    margin-right: 0.75rem;
+    font-weight: bold;
+  }
+
+  .small {
+    padding: 0.5rem 1rem;
+    font-size: 0.8rem;
+  }
+
+  @media (max-width: 900px) {
+    .grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

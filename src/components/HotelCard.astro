@@ -1,0 +1,112 @@
+---
+interface Props {
+  name: string;
+  city: string;
+  reason: string;
+  location: string;
+  image: string;
+  url: string;
+}
+
+const { name, city, reason, location, image, url } = Astro.props;
+---
+
+<div class="hotel-card card">
+  <div class="hotel-image">
+    <img src={image} alt={name} loading="lazy" />
+  </div>
+  
+  <div class="hotel-info">
+    <div class="hotel-header">
+      <h3 class="hotel-name">{name}</h3>
+      <span class="hotel-city badge badge-gold">{city}</span>
+    </div>
+    
+    <p class="hotel-location"><strong>Location:</strong> {location}</p>
+    
+    <p class="hotel-reason">
+      <em>{reason}</em>
+    </p>
+    
+    <div class="hotel-footer">
+      <a href={url} target="_blank" rel="noopener noreferrer" class="btn btn-outline small">View Website</a>
+    </div>
+  </div>
+</div>
+
+<style>
+  .hotel-card {
+    display: grid;
+    grid-template-columns: 350px 1fr;
+    gap: var(--spacing-md);
+    padding: 0;
+    overflow: hidden;
+    margin-bottom: var(--spacing-md);
+  }
+
+  .hotel-image {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+
+  .hotel-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+  }
+
+  .hotel-card:hover .hotel-image img {
+    transform: scale(1.05);
+  }
+
+  .hotel-info {
+    padding: var(--spacing-md);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: var(--spacing-sm);
+  }
+
+  .hotel-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  .hotel-name {
+    font-size: 1.5rem;
+    margin-bottom: 0.25rem;
+  }
+
+  .hotel-location {
+    font-size: 0.85rem;
+    color: var(--color-text-muted);
+  }
+
+  .hotel-reason {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--color-text);
+  }
+
+  .hotel-footer {
+    margin-top: var(--spacing-sm);
+  }
+
+  .small {
+    padding: 0.5rem 1.25rem;
+    font-size: 0.8rem;
+  }
+
+  @media (max-width: 900px) {
+    .hotel-card {
+      grid-template-columns: 1fr;
+    }
+    
+    .hotel-image {
+      height: 250px;
+    }
+  }
+</style>

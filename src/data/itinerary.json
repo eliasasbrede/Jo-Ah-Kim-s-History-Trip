@@ -1,0 +1,156 @@
+[
+  {
+    "day": 1,
+    "date": "2026-05-23",
+    "title": "Welcome to Hanoi",
+    "location": "Hanoi",
+    "description": "Arrival in the thousand-year-old capital. After settling in, enjoy an orientation walk through the French Quarter and Old Quarter to absorb the city's unique atmosphere.",
+    "activities": [
+      "Arrival and hotel check-in",
+      "Orientation walk through the Old Quarter",
+      "Evening at leisure"
+    ],
+    "dining": {
+      "lunch": "At leisure",
+      "dinner": "Chả Cá Thăng Long",
+      "note": "A Hanoi institution recognized with a Michelin Bib Gourmand, specializing in the legendary turmeric-and-dill fish dish."
+    },
+    "accommodation": "Sofitel Legend Metropole Hanoi",
+    "historyNote": "Hanoi's layer-upon-layer history begins with its 1010 AD founding by the Ly Dynasty."
+  },
+  {
+    "day": 2,
+    "date": "2026-05-24",
+    "title": "The Imperial & Scholarly Capital",
+    "location": "Hanoi",
+    "description": "A deep dive into Vietnam's statehood and scholarly traditions.",
+    "activities": [
+      "Imperial Citadel of Thăng Long (UNESCO World Heritage Site)",
+      "Vietnam National Museum of History",
+      "Temple of Literature (Quoc Tu Giam)"
+    ],
+    "dining": {
+      "lunch": "Local specialty",
+      "dinner": "Gia",
+      "note": "An elevated culinary journey at Gia, awarded one Michelin Star for its innovative approach to Vietnamese heritage flavors."
+    },
+    "accommodation": "Sofitel Legend Metropole Hanoi",
+    "historyNote": "The Thăng Long Citadel was the center of regional political power for 13 consecutive centuries."
+  },
+  {
+    "day": 3,
+    "date": "2026-05-25",
+    "title": "Ancient Capitals & Karst Landscapes",
+    "location": "Ninh Binh",
+    "description": "A day trip south to the 'Halong Bay on Land'.",
+    "activities": [
+      "Tràng An Landscape Complex (UNESCO World Heritage Site) by traditional sampan",
+      "Hoa Lư Ancient Capital (capital of Vietnam in the 10th and 11th centuries)",
+      "Return to Hanoi"
+    ],
+    "dining": {
+      "lunch": "Ninh Binh specialties (Goat meat and elderberry)",
+      "dinner": "At leisure in Hanoi",
+      "note": "Explore Hanoi's diverse street food or hotel dining."
+    },
+    "accommodation": "Sofitel Legend Metropole Hanoi",
+    "historyNote": "Hoa Lư served as the capital of the Đinh and early Lê dynasties."
+  },
+  {
+    "day": 4,
+    "date": "2026-05-26",
+    "title": "70th Birthday in the Citadel of Hue",
+    "location": "Hue",
+    "description": "Fly to the imperial heart of Vietnam. Today marks the 70th Birthday celebration.",
+    "activities": [
+      "Morning flight to Huế",
+      "Complex of Huế Monuments (UNESCO World Heritage Site)",
+      "The Imperial City and Purple Forbidden City",
+      "Birthday Celebration"
+    ],
+    "dining": {
+      "lunch": "Garden house dining",
+      "dinner": "Birthday Celebration Dinner",
+      "note": "A private, refined banquet featuring Hue's famous Imperial Cuisine at the hotel's signature restaurant."
+    },
+    "accommodation": "Silk Path Grand Hue Hotel / Azerai La Residence",
+    "historyNote": "Huế was the seat of the Nguyễn Dynasty, the last ruling family of Vietnam (1802–1945)."
+  },
+  {
+    "day": 5,
+    "date": "2026-05-27",
+    "title": "Tombs of the Emperors",
+    "location": "Hue",
+    "description": "Exploring the poetic end-points of the Nguyễn Emperors.",
+    "activities": [
+      "Tomb of Tự Đức (the most poetic of the imperial tombs)",
+      "Tomb of Khải Định (a unique blend of Oriental and European styles)",
+      "Thiên Mụ Pagoda (the iconic seven-story icon of Huế)"
+    ],
+    "dining": {
+      "lunch": "Traditional Hue Noodle specialties",
+      "dinner": "Ancient Hue Garden Houses",
+      "note": "Dining in a restored mandarin residence for authentic provincial flavors."
+    },
+    "accommodation": "Silk Path Grand Hue Hotel / Azerai La Residence",
+    "historyNote": "The imperial tombs were designed as living palaces for the afterlife."
+  },
+  {
+    "day": 6,
+    "date": "2026-05-28",
+    "title": "Over the Pass to the Champa Coast",
+    "location": "Da Nang & Hoi An",
+    "description": "A scenic drive via the Hai Van Pass to the central coast.",
+    "activities": [
+      "Drive via Hai Van Pass ('Sea Cloud Pass')",
+      "Da Nang Museum of Cham Sculpture (early 20th-century colonial origin)",
+      "Arrive at The Nam Hai for coastal relaxation"
+    ],
+    "dining": {
+      "lunch": "Seafood in Da Nang",
+      "dinner": "The Nam Hai",
+      "note": "Beachside dining at one of the world's finest resorts."
+    },
+    "accommodation": "Four Seasons Resort The Nam Hai",
+    "historyNote": "The Cham Museum houses the world's largest collection of Champa sculpture, established by the EFEO in 1915."
+  },
+  {
+    "day": 7,
+    "date": "2026-05-29",
+    "title": "The Trading Port & The Sacred Sanctuary",
+    "location": "Hoi An",
+    "description": "A day of contrasts: from the bustling port of Hội An to the spiritual silence of Mỹ Sơn.",
+    "activities": [
+      "Hội An Ancient Town (UNESCO World Heritage Site) walk",
+      "Mỹ Sơn Sanctuary (UNESCO World Heritage Site) - Hindu temple ruins",
+      "Evening in Hội An"
+    ],
+    "dining": {
+      "lunch": "Hoi An specialty (Cao Lau)",
+      "dinner": "Nén Danang",
+      "note": "A visit to Nén Danang, awarded a Michelin Green Star for sustainable gastronomy and farm-to-table excellence."
+    },
+    "accommodation": "Four Seasons Resort The Nam Hai",
+    "historyNote": "Hội An was a major Southeast Asian trading port from the 15th to 19th centuries."
+  },
+  {
+    "day": 8,
+    "date": "2026-05-30",
+    "title": "Modern History & Thailand Departure",
+    "location": "Saigon & Bangkok",
+    "description": "Concluding the journey in the dynamic south before the Thailand handoff.",
+    "activities": [
+      "Morning flight to Ho Chi Minh City (Saigon)",
+      "Saigon Central Post Office and Notre Dame Cathedral",
+      "War Remnants Museum / Independence Palace",
+      "Evening flight to Bangkok, Thailand"
+    ],
+    "dining": {
+      "lunch": "Modern Saigon dining",
+      "dinner": "At leisure / In transit",
+      "note": "A final Vietnamese meal before the evening handoff in Bangkok."
+    },
+    "accommodation": "Bangkok (Handoff)",
+    "historyNote": "The Independence Palace was the site of the end of the Vietnam War in 1975."
+  }
+]

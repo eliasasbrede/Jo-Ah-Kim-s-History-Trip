@@ -1,0 +1,112 @@
+---
+import Layout from '../layouts/Layout.astro';
+import diningData from '../data/dining.json';
+
+const base = '/Jo-Ah-Kim-s-History-Trip';
+---
+
+<Layout title="Dining" description="Explore the Michelin-recognized culinary landscape of the Vietnam journey.">
+  <main class="container">
+    <header class="page-header">
+      <h1 class="page-title">Refined Dining</h1>
+      <p class="page-subtitle">A gastronomic celebration of Vietnam's finest flavors and Michelin recognition.</p>
+    </header>
+
+    <div class="dining-list">
+      {diningData.map((restaurant) => (
+        <div class="dining-item card">
+          <div class="dining-header">
+            <h2 class="dining-name">{restaurant.name}</h2>
+            <div class="michelin-badge badge badge-gold">{restaurant.michelin}</div>
+          </div>
+          
+          <div class="dining-meta">
+            <span class="dining-city"><strong>City:</strong> {restaurant.city}</span>
+            <span class="dining-style"><strong>Style:</strong> {restaurant.style}</span>
+          </div>
+          
+          <p class="dining-reason">{restaurant.reason}</p>
+          
+          <div class="dining-footer">
+            <a href={restaurant.url} target="_blank" rel="noopener noreferrer" class="btn btn-outline small">View Restaurant Website</a>
+          </div>
+        </div>
+      ))}
+    </div>
+
+    <section class="hue-dining section">
+      <div class="card bg-accent-soft text-center p-lg">
+        <h3>Imperial Dining in Huế</h3>
+        <p>For the stay in Huế, including the milestone 70th Birthday on May 26, we focus on integrated <strong>fine dining</strong> at our five-star hosting properties. The menus offer a deep exploration of provincial specialties, traditionally prepared for the royal court of the Nguyễn Dynasty.</p>
+      </div>
+    </section>
+  </main>
+</Layout>
+
+<style>
+  .page-header {
+    padding: var(--spacing-lg) 0;
+    text-align: center;
+    border-bottom: 1px solid var(--color-border);
+    margin-bottom: var(--spacing-lg);
+  }
+
+  .page-title {
+    font-size: 3rem;
+  }
+
+  .dining-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--spacing-md);
+    margin-bottom: var(--spacing-xl);
+  }
+
+  .dining-item {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-sm);
+    justify-content: space-between;
+  }
+
+  .dining-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .dining-name {
+    font-size: 1.5rem;
+  }
+
+  .dining-meta {
+    display: flex;
+    gap: var(--spacing-md);
+    font-size: 0.85rem;
+    color: var(--color-text-muted);
+  }
+
+  .dining-reason {
+    font-size: 0.95rem;
+    margin-top: 0.5rem;
+  }
+
+  .dining-footer {
+    margin-top: var(--spacing-sm);
+  }
+
+  .small {
+    padding: 0.4rem 1rem;
+    font-size: 0.8rem;
+  }
+
+  .p-lg {
+    padding: var(--spacing-lg);
+  }
+
+  @media (max-width: 900px) {
+    .dining-list {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

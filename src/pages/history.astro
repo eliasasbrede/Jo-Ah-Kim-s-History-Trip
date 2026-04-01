@@ -1,0 +1,114 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const base = '/Jo-Ah-Kim-s-History-Trip';
+---
+
+<Layout title="History Themes" description="A thematic guide to the historical arc of the journey, from dynastic dynasties to colonial memory and reunification.">
+  <main class="container">
+    <header class="page-header">
+      <h1 class="page-title">Historical Themes</h1>
+      <p class="page-subtitle">A narrative arc through Vietnam’s millennia of heritage.</p>
+    </header>
+
+    <div class="themes-grid">
+      <article class="theme-card card">
+        <h2 class="theme-title">Imperial & Dynastic Vietnam</h2>
+        <p class="theme-context">The journey begins in Hanoi at the <strong>Imperial Citadel of Thăng Long</strong>, the political heart of regional power for 13 centuries. From the Lý to the Trần dynasties, we explore the foundations of a centralized Vietnamese state and its scholarly traditions at the <strong>Temple of Literature</strong>.</p>
+      </article>
+
+      <article class="theme-card card">
+        <h2 class="theme-title">Huế & the Nguyễn Court</h2>
+        <p class="theme-context">Moving into the central highlands, the focus shifts to the <strong>Nguyễn Dynasty (1802–1945)</strong>. The <strong>Imperial City of Huế</strong> serves as the grand stage for this era of absolute monarchy, featuring sophisticated architectural harmony and the uniquely personalized imperial tombs of Tự Đức and Khải Định.</p>
+      </article>
+
+      <article class="theme-card card">
+        <h2 class="theme-title">Maritime Trade & Hội An</h2>
+        <p class="theme-context">In the 15th to 19th centuries, the central coast became a crossroads of civilization. <strong>Hội An Ancient Town</strong> remains the most well-preserved example of an international trading port, showcasing a blend of Vietnamese, Chinese, Japanese, and European influences.</p>
+      </article>
+
+      <article class="theme-card card">
+        <h2 class="theme-title">Champa & Mỹ Sơn</h2>
+        <p class="theme-context">The religious landscape of central Vietnam is deeply influenced by the <strong>Champa Kingdom</strong>. The Hindu temple ruins of <strong>Mỹ Sơn Sanctuary</strong>, along with the <strong>Museum of Cham Sculpture</strong>, connect us to the spiritual heart of this unique Austronesian culture.</p>
+      </article>
+
+      <article class="theme-card card">
+        <h2 class="theme-title">Colonial & War Memory</h2>
+        <p class="theme-context">The late 19th and 20th centuries brought French administration and subsequent struggle. From the <strong>Metropole Hanoi</strong> to the <strong>Independence Palace</strong> in Saigon, we witness the architecture of colonialism and the sites marking the end of the Vietnam War in 1975.</p>
+      </article>
+
+      <article class="theme-card card">
+        <h2 class="theme-title">Reunification & Modernity</h2>
+        <p class="theme-context">Concluding in Ho Chi Minh City, we reflect on the <strong>unification</strong> of a nation. The journey through the War Remnants Museum and the vibrant energy of Saigon today provides a complex, mature look at the country's path from a feudal past to a dynamic global future.</p>
+      </article>
+    </div>
+
+    <section class="history-quote section">
+      <blockquote class="accent-quote">
+        “History is not just the past; it is the ground upon which we walk today.”
+      </blockquote>
+    </section>
+  </main>
+</Layout>
+
+<style>
+  .page-header {
+    padding: var(--spacing-lg) 0;
+    text-align: center;
+    margin-bottom: var(--spacing-lg);
+  }
+
+  .themes-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--spacing-md);
+  }
+
+  .theme-card {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .theme-title {
+    font-size: 1.5rem;
+    color: var(--color-primary);
+  }
+
+  .theme-context {
+    font-size: 1rem;
+    color: var(--color-text-muted);
+    line-height: 1.6;
+  }
+
+  .history-quote {
+    text-align: center;
+    padding: var(--spacing-xl) 0;
+  }
+
+  .accent-quote {
+    font-family: var(--font-serif);
+    font-size: 2.5rem;
+    font-style: italic;
+    color: var(--color-accent);
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
+  }
+
+  .accent-quote::before, .accent-quote::after {
+    content: '"';
+    color: var(--color-accent-soft);
+    font-style: normal;
+  }
+
+  @media (max-width: 900px) {
+    .themes-grid {
+      grid-template-columns: 1fr;
+    }
+    
+    .accent-quote {
+      font-size: 1.5rem;
+    }
+  }
+</style>

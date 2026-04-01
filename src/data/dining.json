@@ -1,0 +1,38 @@
+[
+  {
+    "id": "gia-hanoi",
+    "name": "Gia",
+    "city": "Hanoi",
+    "style": "Contemporary Vietnamese",
+    "michelin": "One MICHELIN Star",
+    "reason": "Chef Sam Tran’s innovative tasting menus tell stories of Vietnamese regions through seasonal local ingredients and sophisticated techniques.",
+    "url": "https://www.gia-hanoi.com/"
+  },
+  {
+    "id": "cha-ca-thang-long",
+    "name": "Chả Cá Thăng Long",
+    "city": "Hanoi",
+    "style": "Traditional/Specialty",
+    "michelin": "Bib Gourmand",
+    "reason": "Specializing in Chả Cá, a dish so legendary it has its own street in the Old Quarter. This spot is recognized for consistency and exceptional value.",
+    "url": "http://chacathanglong.com/"
+  },
+  {
+    "id": "nen-danang",
+    "name": "Nén Danang",
+    "city": "Da Nang",
+    "style": "Sustainable Vietnamese",
+    "michelin": "MICHELIN Green Star",
+    "reason": "A leader in sustainable gastronomy, using hyper-local ingredients and traditional fermentation to create dishes that are as thoughtful as they are delicious.",
+    "url": "https://www.nen-danang.com/"
+  },
+  {
+    "id": "anan-saigon",
+    "name": "Anan Saigon",
+    "city": "Ho Chi Minh City",
+    "style": "Elevated Street Food",
+    "michelin": "One MICHELIN Star",
+    "reason": "Located in a traditional wet market, Chef Peter Cuong Franklin transforms street food classics like Pho and Banh Mi into high-end culinary experiences.",
+    "url": "https://anansaigon.com/"
+  }
+]

@@ -1,0 +1,56 @@
+[
+  {
+    "id": "metropole-hanoi",
+    "name": "Sofitel Legend Metropole Hanoi",
+    "city": "Hanoi",
+    "reason": "An icon of Indochinian elegance since 1901. Its historical wing and wartime bunker offer a direct connection to Hanoi's complex past.",
+    "location": "French Quarter",
+    "image": "https://images.unsplash.com/photo-1555413340-a359432653fc?auto=format&fit=crop&q=80&w=800",
+    "url": "https://www.sofitel-legend-metropole-hanoi.com/"
+  },
+  {
+    "id": "silk-path-hue",
+    "name": "Silk Path Grand Hue Hotel & Spa",
+    "city": "Hue",
+    "reason": "A contemporary tribute to imperial majesty, blending French architecture with traditional Vietnamese motifs.",
+    "location": "Le Loi Street, near the Perfume River",
+    "image": "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&q=80&w=800",
+    "url": "https://silkpathhotel.com/en/Hue"
+  },
+  {
+    "id": "azerai-la-residence",
+    "name": "Azerai La Residence, Hue",
+    "city": "Hue",
+    "reason": "The former residence of the French Résident Supérieur. An Art Deco masterpiece overlooking the Citadel.",
+    "location": "South bank of the Perfume River",
+    "image": "https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&q=80&w=800",
+    "url": "https://azerai.com/resorts/azerai-la-residence-hue/"
+  },
+  {
+    "id": "the-nam-hai",
+    "name": "Four Seasons Resort The Nam Hai",
+    "city": "Hoi An Coast",
+    "reason": "The pinnacle of luxury in Central Vietnam. All villas are designed based on traditional architecture and Feng Shui principles.",
+    "location": "Ha My Beach, near Hoi An",
+    "image": "https://images.unsplash.com/photo-1540541338287-41700207dee6?auto=format&fit=crop&q=80&w=800",
+    "url": "https://www.fourseasons.com/hoian/"
+  },
+  {
+    "id": "caravelle-saigon",
+    "name": "Caravelle Saigon",
+    "city": "Ho Chi Minh City",
+    "reason": "A centerpiece of Saigon's history since 1959. Famous for its role as a hub for international journalists during the Vietnam War.",
+    "location": "District 1, overlooking the Opera House",
+    "image": "https://images.unsplash.com/photo-1596495573105-0c034789886a?auto=format&fit=crop&q=80&w=800",
+    "url": "https://www.caravellehotel.com/"
+  },
+  {
+    "id": "sofitel-saigon",
+    "name": "Sofitel Saigon Plaza",
+    "city": "Ho Chi Minh City",
+    "reason": "A refined blend of French lifestyle and Vietnamese hospitality, located on the historic Le Duan Boulevard.",
+    "location": "District 1, near the Botanical Gardens",
+    "image": "https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?auto=format&fit=crop&q=80&w=800",
+    "url": "https://sofitel-saigon-plaza.com/"
+  }
+]

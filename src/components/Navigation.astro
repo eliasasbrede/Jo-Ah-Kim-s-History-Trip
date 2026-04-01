@@ -1,0 +1,127 @@
+---
+const links = [
+  { href: "/", label: "Home" },
+  { href: "/itinerary", label: "Itinerary" },
+  { href: "/hotels", label: "Hotels" },
+  { href: "/dining", label: "Dining" },
+  { href: "/history", label: "History Themes" },
+  { href: "/thailand", label: "Thailand Handoff" },
+  { href: "/practicalities", label: "Practicalities" },
+];
+
+// For GitHub Pages base path
+const base = '/Jo-Ah-Kim-s-History-Trip';
+---
+
+<nav class="nav no-print">
+  <div class="container nav-content">
+    <a href={`${base}/`} class="logo">
+      <span class="logo-text">Historical Vietnam Week</span>
+      <span class="logo-sub">Joachim’s 70th Birthday</span>
+    </a>
+    
+    <button class="mobile-menu-toggle" aria-label="Toggle Menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+    
+    <ul class="nav-links">
+      {links.map((link) => (
+        <li>
+          <a href={`${base}${link.href}`} class="nav-link">
+            {link.label}
+          </a>
+        </li>
+      ))}
+    </ul>
+  </div>
+</nav>
+
+<style>
+  .nav {
+    border-bottom: 1px solid var(--color-border);
+    background-color: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(8px);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    padding: var(--spacing-sm) 0;
+  }
+
+  .nav-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .logo {
+    display: flex;
+    flex-direction: column;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-family: var(--font-serif);
+  }
+
+  .logo-text {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--color-primary);
+  }
+
+  .logo-sub {
+    font-size: 0.65rem;
+    font-weight: 500;
+    color: var(--color-accent);
+    margin-top: -2px;
+  }
+
+  .nav-links {
+    display: flex;
+    gap: var(--spacing-md);
+    font-size: 0.85rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  .nav-link {
+    color: var(--color-text-muted);
+    padding: 0.5rem 0;
+    position: relative;
+  }
+
+  .nav-link:hover {
+    color: var(--color-primary);
+  }
+
+  .nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    height: 1.5px;
+    background-color: var(--color-accent);
+    transition: var(--transition);
+  }
+
+  .nav-link:hover::after {
+    width: 100%;
+  }
+
+  .mobile-menu-toggle {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+
+  @media (max-width: 900px) {
+    .nav-links {
+      display: none; /* Mobile menu implementation omitted for brevity, focusing on core pages */
+    }
+  }
+</style>

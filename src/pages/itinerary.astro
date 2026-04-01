@@ -1,0 +1,96 @@
+---
+import Layout from '../layouts/Layout.astro';
+import ItineraryCard from '../components/ItineraryCard.astro';
+import itineraryData from '../data/itinerary.json';
+
+const base = '/Jo-Ah-Kim-s-History-Trip';
+---
+
+<Layout title="Itinerary" description="The complete 8-day journey from Hanoi to Saigon. Includes UNESCO sites, Michelin dining, and birth celebration details.">
+  <main class="container">
+    <header class="page-header">
+      <h1 class="page-title">The Itinerary</h1>
+      <p class="page-subtitle">A seven-night historical journey through the heart of Vietnam.</p>
+      
+      <div class="itinerary-actions no-print">
+        <a href={`${base}/files/historical-vietnam-week.ics`} download class="btn btn-outline" title="Add to Calendar">
+          📅 Export to Calendar (.ics)
+        </a>
+        <button onclick="window.print()" class="btn btn-outline">
+          🖨️ Print-Friendly View
+        </button>
+      </div>
+    </header>
+
+    <div class="itinerary-timeline">
+      {itineraryData.map((day) => (
+        <ItineraryCard {...day} />
+      ))}
+    </div>
+
+    <section class="itinerary-footer no-print">
+      <div class="card bg-accent-soft">
+        <h3>End of Hosted Week</h3>
+        <p>Following the final sights in Ho Chi Minh City on Day 8, the journey continues with a handoff in Bangkok, Thailand, to meet wife and child for the next phase of the trip.</p>
+        <a href={`${base}/thailand`} class="btn mt-md">View Thailand Handoff Details</a>
+      </div>
+    </section>
+  </main>
+</Layout>
+
+<style>
+  .page-header {
+    padding: var(--spacing-lg) 0;
+    text-align: center;
+    border-bottom: 1px solid var(--color-border);
+    margin-bottom: var(--spacing-lg);
+  }
+
+  .page-title {
+    font-size: 3rem;
+  }
+
+  .page-subtitle {
+    font-size: 1.1rem;
+    color: var(--color-text-muted);
+    margin-top: 0.5rem;
+  }
+
+  .itinerary-actions {
+    margin-top: var(--spacing-md);
+    display: flex;
+    justify-content: center;
+    gap: var(--spacing-sm);
+  }
+
+  .itinerary-timeline {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+  }
+
+  .itinerary-footer {
+    margin: var(--spacing-xl) 0;
+  }
+
+  .bg-accent-soft {
+    background-color: var(--color-accent-soft);
+    border: none;
+    text-align: center;
+  }
+
+  .mt-md {
+    margin-top: var(--spacing-md);
+  }
+
+  @media print {
+    .page-header {
+      padding: 0;
+      margin-bottom: var(--spacing-md);
+    }
+    
+    .page-title {
+      font-size: 2rem;
+    }
+  }
+</style>

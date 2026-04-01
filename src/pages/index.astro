@@ -1,0 +1,270 @@
+---
+import Layout from '../layouts/Layout.astro';
+const base = '/Jo-Ah-Kim-s-History-Trip';
+---
+
+<Layout title="Home">
+  <main>
+    <section class="hero">
+      <div class="hero-overlay"></div>
+      <div class="container hero-content">
+        <h1 class="hero-title animate-fade-up">Joachim’s 70th Birthday: <br/><span class="accent-text">Historical Vietnam Week</span></h1>
+        <p class="hero-subtitle animate-fade-up-delay">A seven-night journey from Hanoi to Huế to Hội An, closing in Ho Chi Minh City before Thailand.</p>
+        <div class="hero-cta animate-fade-up-delay-2">
+          <a href={`${base}/itinerary`} class="btn">Explore the Itinerary</a>
+          <a href="#overview" class="btn btn-outline" style="color: white; border-color: white;">The Journey Arc</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="overview" class="section overview-section">
+      <div class="container">
+        <div class="overview-grid">
+          <div class="overview-text">
+            <h2 class="section-title">The Historical Arc</h2>
+            <p>This journey is more than a vacation; it is a curated exploration of Vietnam's soul. From the <strong>thousand-year-old dynastic capital</strong> of Hanoi to the <strong>Imperial City of Huế</strong>, we trace the rise and fall of emperors, the resilience of a nation, and the beauty of its living heritage.</p>
+            <p>Our path leads us through UNESCO World Heritage sites: the ancient trading port of <strong>Hội An</strong>, the sacred Champa ruins of <strong>Mỹ Sơn</strong>, and the modernist echoes of <strong>Saigon</strong>. It is a tribute to history, family, and a milestone 70th year.</p>
+            
+            <div class="trip-details">
+              <div class="detail-item">
+                <span class="detail-label">Dates</span>
+                <span class="detail-value">May 23 – 30, 2026</span>
+              </div>
+              <div class="detail-item">
+                <span class="detail-label">Milestone</span>
+                <span class="detail-value">70th Birthday (May 26)</span>
+              </div>
+            </div>
+          </div>
+          
+          <div class="overview-card card">
+            <h3 class="card-title">Journey Summary</h3>
+            <ul class="summary-list">
+              <li><strong>Route:</strong> North to South (Hanoi → Hue → Hoi An → HCMC)</li>
+              <li><strong>Duration:</strong> 7 Nights / 8 Days</li>
+              <li><strong>Focus:</strong> Dynastic history, UNESCO heritage, family celebration</li>
+              <li><strong>Standards:</strong> Five-star luxury stays, private expert-led tours</li>
+            </ul>
+            <div class="birthday-highlight">
+              <p>🎂 <strong>Special Birthday Dinner:</strong> May 26 in the Imperial City of Huế.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section reasons-section">
+      <div class="container text-center">
+        <h2 class="section-title">Why This Journey</h2>
+        <p class="section-subtitle">A meaningful 70th birthday gift framed by legacy and landscape.</p>
+        
+        <div class="reasons-grid">
+          <div class="reason-card card">
+            <div class="reason-icon">🏛️</div>
+            <h3>Deep Heritage</h3>
+            <p>Focusing on the historical centers of Thai Thang Long, the Southern Dynasties, and the Colonial era.</p>
+          </div>
+          <div class="reason-card card">
+            <div class="reason-icon">🍱</div>
+            <h3>Culinary Excellence</h3>
+            <p>Featuring Michelin-starred dining and traditional Imperial banquets that define Vietnamese gastronomy.</p>
+          </div>
+          <div class="reason-card card">
+            <div class="reason-icon">🧘</div>
+            <h3>Private Luxury</h3>
+            <p>Slow-travel approach with stays at iconic properties like the Metropole and The Nam Hai.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+</Layout>
+
+<style>
+  .hero {
+    height: 85vh;
+    background-image: url('https://images.unsplash.com/photo-1555944858-752c8a20ca30?auto=format&fit=crop&q=80&w=1500');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    display: flex;
+    align-items: center;
+    color: white;
+  }
+
+  .hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.3));
+  }
+
+  .hero-content {
+    position: relative;
+    z-index: 10;
+    max-width: 800px;
+  }
+
+  .hero-title {
+    font-size: clamp(2.5rem, 6vw, 4rem);
+    line-height: 1.1;
+    margin-bottom: var(--spacing-sm);
+    color: white;
+  }
+
+  .accent-text {
+    color: var(--color-accent-soft);
+  }
+
+  .hero-subtitle {
+    font-size: 1.25rem;
+    max-width: 600px;
+    margin-bottom: var(--spacing-md);
+    opacity: 0.9;
+  }
+
+  .hero-cta {
+    display: flex;
+    gap: var(--spacing-sm);
+  }
+
+  .overview-grid {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: var(--spacing-lg);
+    align-items: center;
+  }
+
+  .section-title {
+    font-size: 2.25rem;
+    margin-bottom: var(--spacing-sm);
+    position: relative;
+    padding-bottom: 0.5rem;
+  }
+
+  .section-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 60px;
+    height: 3px;
+    background-color: var(--color-accent);
+  }
+
+  .overview-text p {
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+    color: var(--color-text-muted);
+  }
+
+  .trip-details {
+    display: flex;
+    gap: var(--spacing-md);
+    margin-top: var(--spacing-md);
+  }
+
+  .detail-item {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .detail-label {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--color-accent);
+    font-weight: 700;
+  }
+
+  .detail-value {
+    font-size: 1.1rem;
+    font-weight: 500;
+  }
+
+  .summary-list {
+    margin-top: var(--spacing-sm);
+  }
+
+  .summary-list li {
+    margin-bottom: 0.75rem;
+    font-size: 0.95rem;
+    border-bottom: 1px solid var(--color-bg-alt);
+    padding-bottom: 0.5rem;
+  }
+
+  .birthday-highlight {
+    margin-top: var(--spacing-md);
+    padding: var(--spacing-sm);
+    background-color: var(--color-accent-soft);
+    border-radius: 4px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-align: center;
+  }
+
+  .reasons-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--spacing-md);
+    margin-top: var(--spacing-lg);
+  }
+
+  .reason-card {
+    text-align: center;
+    padding: var(--spacing-lg) var(--spacing-md);
+  }
+
+  .reason-icon {
+    font-size: 2.5rem;
+    margin-bottom: var(--spacing-sm);
+  }
+
+  .text-center {
+    text-align: center;
+  }
+  
+  .section-subtitle {
+    font-size: 1.1rem;
+    color: var(--color-text-muted);
+    margin-bottom: var(--spacing-md);
+  }
+
+  @media (max-width: 900px) {
+    .overview-grid {
+      grid-template-columns: 1fr;
+    }
+    
+    .reasons-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  /* Animations */
+  .animate-fade-up {
+    animation: fadeUp 1s ease-out forwards;
+  }
+  
+  .animate-fade-up-delay {
+    opacity: 0;
+    animation: fadeUp 1s ease-out 0.3s forwards;
+  }
+  
+  .animate-fade-up-delay-2 {
+    opacity: 0;
+    animation: fadeUp 1s ease-out 0.6s forwards;
+  }
+
+  @keyframes fadeUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+</style>

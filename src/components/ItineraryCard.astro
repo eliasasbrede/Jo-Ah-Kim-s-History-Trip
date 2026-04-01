@@ -1,0 +1,186 @@
+---
+interface Dining {
+  lunch: string;
+  dinner: string;
+  note: string;
+}
+
+interface Props {
+  day: number;
+  date: string;
+  title: string;
+  location: string;
+  description: string;
+  activities: string[];
+  dining: Dining;
+  accommodation: string;
+  historyNote: string;
+}
+
+const { day, date, title, location, description, activities, dining, accommodation, historyNote } = Astro.props;
+
+// Format date to local friendly string
+const dateObj = new Date(date);
+const dateStr = dateObj.toLocaleDateString('en-US', { weekday: 'short', month: 'short', day: 'numeric', year: 'numeric' });
+---
+
+<div class="itinerary-card card">
+  <div class="card-header">
+    <div class="day-badge badge badge-gold">Day {day}</div>
+    <div class="date-text">{dateStr}</div>
+  </div>
+  
+  <div class="card-body">
+    <div class="card-main">
+      <h3 class="day-title">{title}</h3>
+      <p class="location-tag">{location}</p>
+      
+      <p class="day-description">{description}</p>
+      
+      <div class="activities-section">
+        <h4>Key Activities</h4>
+        <ul>
+          {activities.map((activity) => (
+            <li>{activity}</li>
+          ))}
+        </ul>
+      </div>
+      
+      <div class="history-insight">
+        <p><strong>Historical Insight:</strong> {historyNote}</p>
+      </div>
+    </div>
+    
+    <div class="card-meta">
+      <div class="dining-box">
+        <h4>Dining Notes</h4>
+        <p><strong>Lunch:</strong> {dining.lunch}</p>
+        <p><strong>Dinner:</strong> {dining.dinner}</p>
+        <p class="dining-note">{dining.note}</p>
+      </div>
+      
+      <div class="accommodation-box">
+        <h4>Accommodation</h4>
+        <p>{accommodation}</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+  .itinerary-card {
+    margin-bottom: var(--spacing-md);
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+  }
+
+  .card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--color-border);
+    padding-bottom: var(--spacing-sm);
+  }
+
+  .date-text {
+    font-size: 0.9rem;
+    color: var(--color-text-muted);
+    font-weight: 500;
+  }
+
+  .card-body {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: var(--spacing-lg);
+  }
+
+  .day-title {
+    font-size: 1.75rem;
+    margin-bottom: 0.25rem;
+  }
+
+  .location-tag {
+    color: var(--color-accent);
+    font-weight: 600;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: var(--spacing-sm);
+  }
+
+  .day-description {
+    font-size: 1rem;
+    color: var(--color-text-muted);
+    margin-bottom: var(--spacing-md);
+  }
+
+  .activities-section h4, .dining-box h4, .accommodation-box h4 {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--color-primary);
+    margin-bottom: 0.75rem;
+    font-weight: 700;
+  }
+
+  .activities-section ul {
+    list-style-type: disc;
+    margin-left: 1.25rem;
+    color: var(--color-text);
+  }
+
+  .activities-section li {
+    margin-bottom: 0.4rem;
+  }
+
+  .history-insight {
+    margin-top: var(--spacing-md);
+    padding: var(--spacing-sm);
+    background-color: var(--color-bg-alt);
+    border-left: 3px solid var(--color-accent);
+    font-size: 0.9rem;
+    font-style: italic;
+  }
+
+  .card-meta {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+    padding-left: var(--spacing-md);
+    border-left: 1px solid var(--color-border);
+  }
+
+  .dining-box p, .accommodation-box p {
+    font-size: 0.95rem;
+    margin-bottom: 0.25rem;
+  }
+
+  .dining-note {
+    font-size: 0.85rem !important;
+    color: var(--color-text-muted);
+    margin-top: 0.5rem !important;
+    font-style: italic;
+  }
+
+  @media (max-width: 900px) {
+    .card-body {
+      grid-template-columns: 1fr;
+    }
+    
+    .card-meta {
+      padding-left: 0;
+      border-left: none;
+      border-top: 1px solid var(--color-border);
+      padding-top: var(--spacing-md);
+    }
+  }
+
+  @media print {
+    .itinerary-card {
+      break-inside: avoid;
+      box-shadow: none;
+      border: 1px solid #eee;
+    }
+  }
+</style>
