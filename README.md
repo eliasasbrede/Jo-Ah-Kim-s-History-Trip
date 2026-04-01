@@ -3,7 +3,7 @@
 A premium, elegant, and static website built as a 70th birthday gift. This repository contains the complete travel itinerary, historical context, and practical guidance for a one-week journey from Hanoi to Ho Chi Minh City, concluding with a family handoff in Thailand.
 
 ## Purpose
-This site serves as a digital gift and comprehensive guide for Joachim’s milestone 70th birthday trip (May 23–30, 2026). It traces a "historical arc" through Vietnam's dynastic, colonial, and modern heritage.
+This site serves as a digital gift and comprehensive guide for Joachim’s milestone 70th birthday trip (Dates TBD, Proposed: May 2027). It traces a "historical arc" through Vietnam's dynastic, colonial, and modern heritage.
 
 ## Tech Stack
 - **Framework:** [Astro](https://astro.build/) (Static Site Generation)
